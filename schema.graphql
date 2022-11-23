@@ -1,0 +1,26 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  allOrders: [Order!]
+  getOrder(orderId: ID!): Order
+}
+
+type Mutation {
+  addOrder(emailAddress: String!, name: String!): Order! @aws_coginto @aws_api
+  addToShopify: ShopifyUpdate! @aws_iam
+}
+
+type Order {
+  orderId: ID!
+  emailAddress: String!
+  name: String!
+}
+
+type ShopifyUpdate {
+  customerId: ID!
+  emailAddress: String!
+  name: String!
+}

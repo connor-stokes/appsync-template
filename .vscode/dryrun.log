@@ -1,0 +1,12 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/Connor/Projects/Development/appsync'
+echo "### build code ###"
+yarn tsc
+echo "### remove old zip ###"
+rm build/payload.zip
+echo "### create zip file ###"
+zip -j payload.zip src/handlers/shopify-update.js
+echo "### move to build directory ###"
+mv payload.zip build/payload.zip
+make: Leaving directory `/Users/Connor/Projects/Development/appsync'
+ 

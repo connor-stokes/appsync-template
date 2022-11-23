@@ -1,0 +1,1 @@
+{"buildTargets":["apply","build_lambda_deployment","deploy","init","plan"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
